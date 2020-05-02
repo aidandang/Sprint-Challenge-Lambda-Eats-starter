@@ -10,6 +10,9 @@ const formSchema = Yup.object().shape({
     .required("Username is must"),
   size: Yup
     .string()
+    .required("Size is required"),
+  instructions: Yup
+    .string()
     .required("Size is required")
 });
 
@@ -20,7 +23,8 @@ export default function Pizza(props) {
     pepperoni: false,
     saugage: false,
     dicedtomatos: false,
-    blackolives: false
+    blackolives: false,
+    instructions: ""
   });
   const [errors, setErrors] = useState({
     name: "",
@@ -71,7 +75,8 @@ export default function Pizza(props) {
           pepperoni: false,
           saugage: false,
           dicedtomatos: false,
-          blackolives: false
+          blackolives: false,
+          instructions: ""
         })
       })
   }
@@ -183,8 +188,7 @@ export default function Pizza(props) {
               <div className="col-sm-7 mt-3 mb-2">
                 <div className="form-group">
                   <input 
-                    type="textarea"
-                    rows="4"
+                    type="text"
                     className="form-control" 
                     id="instructions"
                     value={formData.instructions}
