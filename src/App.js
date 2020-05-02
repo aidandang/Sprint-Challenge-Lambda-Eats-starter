@@ -1,8 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-// import Sidebar from './components/Sidebar';
 import Routes from './components/Routes';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
@@ -15,9 +14,9 @@ function App() {
         {/* <Sidebar /> */}
         <Routes />
       </main>
-      {/* <footer>
+      <footer>
         <Footer />
-      </footer> */}
+      </footer>
     </div>
   );
 }

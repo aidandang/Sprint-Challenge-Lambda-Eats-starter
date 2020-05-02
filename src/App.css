@@ -22,3 +22,16 @@
 .footer-custom {
   min-height: 10vh;
 }
+
+.custom-height {
+  height: 60vh !important;
+}
+
+.carousel-caption {
+  top: 100px;
+  bottom: auto;
+}
+
+.footer-custom {
+  min-height: 10vh;
+}
