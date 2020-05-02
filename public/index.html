@@ -24,11 +24,194 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+
+    <!-- 
+      Custom CDN with Bootstrap CSS
+    -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>Lambda Eats</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+
+      <!-- header -->
+      <header class="bg-danger">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-light navbar-dark bg-danger">
+            <a class="navbar-brand" href="#">
+              <i class="fas fa-pizza-slice fa-lg"></i>
+              <span class="ml-2 text-uppercase">Lambda Eats</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./form.html">Order</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+              </ul>
+              <span class="navbar-text">
+                Navbar text with an inline element
+              </span>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- end of header -->
+
+      <!-- main -->
+      <main>
+        <!-- hero -->
+        <div id="hero" class="container carousel slide d-none d-sm-block" data-ride="carousel">
+          <h3 class="col-12 text-danger my-3">Hot Deals</h3>
+          <ol class="carousel-indicators">
+            <li data-target="#hero" data-slide-to="0" class="active"></li>
+            <li data-target="#hero" data-slide-to="1"></li>
+            <li data-target="#hero" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner custom-height">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="./img/ivan-torres-MQUqbmszGGM-unsplash.jpg" alt="First slide">
+              <div class="carousel-caption d-none d-md-block">
+                <h1 class="text-white">CHOOSE ANY 2 FOR <span class="text-danger">$5.99</span></h1>
+                <a href="/" class="btn btn-info">Order Now</a>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="./img/naitian-tony-wang-MqVPSNZcVzk-unsplash.jpg" alt="Second slide">
+              <div class="carousel-caption d-none d-md-block">
+                <h1 class="text-white">CHOOSE ANY 2 FOR <span class="text-danger">$5.99</span></h1>
+                <a href="/" class="btn btn-info">Order Now</a>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="./img/louis-hansel-shotsoflouis-880b45lhxCo-unsplash.jpg" alt="Third slide">
+              <div class="carousel-caption d-none d-md-block">
+                <h1 class="text-white">CHOOSE ANY 2 FOR <span class="text-danger">$5.99</span></h1>
+                <a href="/" class="btn btn-info">Order Now</a>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#hero" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#hero" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <!-- end of hero -->
+        <!-- delivery -->
+        <div class="container">
+          <h3 class="col-12 text-danger mt-3">Delivery Foods in Gotham City</h3>
+          <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4 my-3">
+              <div class="card">
+                <img class="card-img-top" src="./img/2_Col_Nutrition_Calculator_574x383.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">McDonald's</h5>
+                  <p class="card-text"><span class="text-danger">$8.99</span> - McDonald's - Fast Food - Burger</p>
+                  <div class="border border-info rounded py-1 px-3">20 - 30 mins</div><div class="border border-info rounded py-1 px-3 mt-3"><span class="text-danger">$3.99</span> Delivery Fee</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 my-3">
+              <div class="card">
+                <img class="card-img-top" src="./img/perfectgreensalad2500-5993ab28c412440011db26df.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Green Salad</h5>
+                  <p class="card-text"><span class="text-danger">$8.99</span> - McDonald's - Fast Food - Burger</p>
+                  <div class="border border-info rounded py-1 px-3">20 - 30 mins</div><div class="border border-info rounded py-1 px-3 mt-3"><span class="text-danger">$3.99</span> Delivery Fee</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 my-3">
+              <div class="card">
+                <img class="card-img-top" src="./img/Starbucks2020Bevs_Lead.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Starbucks</h5>
+                  <p class="card-text"><span class="text-danger">$8.99</span> - McDonald's - Fast Food - Burger</p>
+                  <div class="border border-info rounded py-1 px-3">20 - 30 mins</div><div class="border border-info rounded py-1 px-3 mt-3"><span class="text-danger">$3.99</span> Delivery Fee</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 my-3">
+              <div class="card">
+                <img class="card-img-top" src="./img/perfectgreensalad2500-5993ab28c412440011db26df.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Green Salad</h5>
+                  <p class="card-text"><span class="text-danger">$8.99</span> - McDonald's - Fast Food - Burger</p>
+                  <div class="border border-info rounded py-1 px-3">20 - 30 mins</div><div class="border border-info rounded py-1 px-3 mt-3"><span class="text-danger">$3.99</span> Delivery Fee</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 my-3">
+              <div class="card">
+                <img class="card-img-top" src="./img/Starbucks2020Bevs_Lead.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Starbucks</h5>
+                  <p class="card-text"><span class="text-danger">$8.99</span> - McDonald's - Fast Food - Burger</p>
+                  <div class="border border-info rounded py-1 px-3">20 - 30 mins</div><div class="border border-info rounded py-1 px-3 mt-3"><span class="text-danger">$3.99</span> Delivery Fee</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 my-3">
+              <div class="card">
+                <img class="card-img-top" src="./img/2_Col_Nutrition_Calculator_574x383.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">McDonald's</h5>
+                  <p class="card-text"><span class="text-danger">$8.99</span> - McDonald's - Fast Food - Burger</p>
+                  <div class="border border-info rounded py-1 px-3">20 - 30 mins</div><div class="border border-info rounded py-1 px-3 mt-3"><span class="text-danger">$3.99</span> Delivery Fee</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of delivery -->
+      </main>
+      <!-- end of main -->
+      <!-- footer -->
+      <footer>
+        <div class="containter-fluid bg-danger mt-3">
+          <div class="row">
+            <div class="col-12 navbar navbar-dark bg-danger">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Back to Top</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 text-center footer-custom">
+              
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- end of footer -->
+
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -39,5 +222,13 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <!-- 
+      Custom CDN with Font Awesome, Bootstrap, JQuery and Popper scripts
+    -->
+    <script src="https://kit.fontawesome.com/e1c7ae4abc.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
   </body>
 </html>
