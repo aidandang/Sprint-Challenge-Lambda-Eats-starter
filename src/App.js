@@ -1,11 +1,24 @@
-import React from "react";
+import React from 'react';
+import Navbar from './components/Navbar';
+import Routes from './components/Routes';
+import Footer from './components/Footer';
+import './App.css';
 
-const App = () => {
+function App() {
   return (
-    <>
-      <h1>Lambda Eats</h1>
-      <p>You can remove this code and create your own header</p>
-    </>
+    <div className="App">
+      <header>
+        <Navbar />
+      </header>
+      <main className="container-fluid">
+        {/* <Sidebar /> */}
+        <Routes />
+      </main>
+      <footer>
+        <Footer />
+      </footer>
+    </div>
   );
-};
+}
+
 export default App;
